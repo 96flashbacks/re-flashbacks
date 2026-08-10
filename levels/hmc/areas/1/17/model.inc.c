@@ -4,12 +4,6 @@ static const Lights1 hmc_seg7_lights_07014EB8 = gdSPDefLights1(
     0xff, 0xff, 0xff, 0x28, 0x28, 0x28
 );
 
-// 0x07014ED0 - 0x07014EE8
-static const Lights1 hmc_seg7_lights_07014ED0 = gdSPDefLights1(
-    0x79, 0x00, 0x00,
-    0xff, 0x00, 0x00, 0x28, 0x28, 0x28
-);
-
 // 0x07014EE8 - 0x07014FE8
 static const Vtx hmc_seg7_vertex_07014EE8[] = {
     {{{ -5426,   1638,  -6271}, 0, { -1870,   1602}, {0x00, 0x7d, 0x14, 0xff}}},
@@ -601,11 +595,6 @@ static const Gfx hmc_seg7_dl_07016A90[] = {
     gsSP2Triangles( 0,  1,  2, 0x0,  0,  3,  1, 0x0),
     gsSP2Triangles( 4,  5,  6, 0x0,  4,  7,  5, 0x0),
     gsSP2Triangles( 4,  8,  9, 0x0,  4,  6,  8, 0x0),
-    gsSPLight(&hmc_seg7_lights_07014ED0.l, 1),
-    gsSPLight(&hmc_seg7_lights_07014ED0.a, 2),
-    gsSPVertex(hmc_seg7_vertex_07015558, 7, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
-    gsSP1Triangle( 0,  2,  6, 0x0),
     gsSPEndDisplayList(),
 };
 

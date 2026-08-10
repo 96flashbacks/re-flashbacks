@@ -286,6 +286,25 @@ static const Vtx hmc_seg7_vertex_07008EB8[] = {
     {{{ -6256,   2150,   2022}, 0, {   990,    990}, {0xff, 0xff, 0xff, 0xff}}},
 };
 
+Vtx Lightie_sm64_mesh_004_mesh_vtx_0[16] = {
+	{{{-5935, 2714, 5987},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-6007, 2714, 5914},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-6007, 2611, 5914},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2611, 5987},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5862, 2714, 5914},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2611, 5987},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5862, 2611, 5914},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2714, 5987},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5862, 2611, 5914},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-6007, 2611, 5914},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2611, 5842},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2611, 5987},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2611, 5842},0, {-16, 974},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-6007, 2714, 5914},0, {974, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-5935, 2714, 5842},0, {-16, -16},{0xff, 0xff, 0xff, 0xff}}},
+	{{{-6007, 2611, 5914},0, {974, 974},{0xff, 0xff, 0xff, 0xff}}},
+};
+
 // 0x07008F98 - 0x070093F0
 static const Gfx hmc_seg7_dl_07008F98[] = {
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, cave_0900A000),
@@ -368,6 +387,15 @@ static const Gfx hmc_seg7_dl_07008F98[] = {
     gsSP2Triangles( 3,  5,  0, 0x0,  6,  7,  8, 0x0),
     gsSP2Triangles( 6,  9,  7, 0x0, 10,  9, 11, 0x0),
     gsSP2Triangles(10, 12,  9, 0x0,  0, 13,  1, 0x0),
+	gsSPVertex(Lightie_sm64_mesh_004_mesh_vtx_0 + 0, 16, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 2, 3, 0),
+	gsSP1Triangle(4, 5, 6, 0),
+	gsSP1Triangle(4, 7, 5, 0),
+	gsSP1Triangle(8, 9, 10, 0),
+	gsSP1Triangle(8, 11, 9, 0),
+	gsSP1Triangle(12, 13, 14, 0),
+	gsSP1Triangle(12, 15, 13, 0),
     gsSPEndDisplayList(),
 };
 

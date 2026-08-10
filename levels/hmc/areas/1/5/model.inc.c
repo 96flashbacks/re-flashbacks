@@ -274,17 +274,6 @@ static const Vtx hmc_seg7_vertex_0700A0B8[] = {
     {{{ -2120,      0,   1117}, 0, {  -330,   1698}, {0x06, 0x49, 0x99, 0xff}}},
 };
 
-// 0x0700A148 - 0x0700A1B8
-static const Vtx hmc_seg7_vertex_0700A148[] = {
-    {{{  2127,    307,   2580}, 0, {   990,    480}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2120,    372,   2580}, 0, {   478,     70}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2062,    314,   2580}, 0, {   480,    888}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2098,    351,   2580}, 0, {   480,    376}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2084,    394,   2580}, 0, {    70,    172}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2041,    351,   2580}, 0, {    70,    786}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  2084,    336,   2580}, 0, {   480,    582}, {0x00, 0x00, 0x7f, 0xff}}},
-};
-
 // 0x0700A1B8 - 0x0700A2A8
 static const Vtx hmc_seg7_vertex_0700A1B8[] = {
     {{{  5579,    922,   2560}, 0, {  8554,   1112}, {0x43, 0xdf, 0x65, 0xff}}},
@@ -1321,11 +1310,6 @@ static const Gfx hmc_seg7_dl_0700D1C8[] = {
     gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
     gsSP2Triangles( 6,  1,  7, 0x0,  6,  7,  8, 0x0),
     gsSP1Triangle( 0,  7,  1, 0x0),
-    gsSPLight(&hmc_seg7_lights_07009478.l, 1),
-    gsSPLight(&hmc_seg7_lights_07009478.a, 2),
-    gsSPVertex(hmc_seg7_vertex_0700A148, 7, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
-    gsSP1Triangle( 3,  5,  6, 0x0),
     gsSPEndDisplayList(),
 };
 
