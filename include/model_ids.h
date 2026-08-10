@@ -541,12 +541,12 @@
 #define MODEL_EXPLOSION                   0xCD        // explosion_geo
 #define MODEL_SNUFIT                      0xCE        // snufit_geo
 #define MODEL_PURPLE_SWITCH               0xCF        // purple_switch_geo
-#define MODEL_CASTLE_STAR_DOOR_30_STARS   0xD0        // castle_geo_000F00
-#define MODEL_CASTLE_STAR_DOOR_50_STARS   0xD1        // castle_geo_000F00
+#define MODEL_CASTLE_STAR_DOOR_25_STARS   0xD0        // castle_geo_000F00
+#define MODEL_CASTLE_STAR_DOOR_35_STARS   0xD1        // castle_geo_000F00
 #define MODEL_CCM_SNOWMAN_BASE            0xD2        // ccm_geo_0003F0
 // find me
 #define MODEL_1UP                         0xD4        // mushroom_1up_geo
-#define MODEL_CASTLE_STAR_DOOR_8_STARS    0xD5        // castle_geo_000F00
+#define MODEL_CASTLE_STAR_DOOR_12_STARS   0xD5        // castle_geo_000F00
 #define MODEL_CASTLE_STAR_DOOR_70_STARS   0xD6        // castle_geo_000F00
 #define MODEL_RED_COIN                    0xD7        // red_coin_geo
 #define MODEL_RED_COIN_NO_SHADOW          0xD8        // red_coin_no_shadow_geo
