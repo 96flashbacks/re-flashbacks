@@ -1,13 +1,7 @@
 // 0x0700AB0C - 0x0700AC44
 const MacroObject vcutm_seg7_macro_objs[] = {
-    MACRO_OBJECT               (/*preset*/ macro_box_1up,              /*yaw*/   0, /*pos*/ -3434,  2951, -3076),
-    MACRO_OBJECT               (/*preset*/ macro_1up,                  /*yaw*/   0, /*pos*/ -4711,  1594, -2532),
-    MACRO_OBJECT               (/*preset*/ macro_1up,                  /*yaw*/   0, /*pos*/ -5952,  -393, -1141),
+    MACRO_OBJECT               (/*preset*/ macro_box_ten_coins,              /*yaw*/   0, /*pos*/ -3434,  2951, -3076),
     MACRO_OBJECT               (/*preset*/ macro_box_vanish_cap,       /*yaw*/   0, /*pos*/  3980,   300, -6220),
-    MACRO_OBJECT               (/*preset*/ macro_hidden_1up_trigger,   /*yaw*/   0, /*pos*/  4200,     0, -4940),
-    MACRO_OBJECT               (/*preset*/ macro_hidden_1up_trigger,   /*yaw*/   0, /*pos*/  4740,     0, -4940),
-    MACRO_OBJECT               (/*preset*/ macro_hidden_1up_trigger,   /*yaw*/   0, /*pos*/  4740,     0, -4400),
-    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_hidden_1up,           /*yaw*/   0, /*pos*/  4460,     0, -4700, /*bhvParam*/ 3),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,        /*yaw*/   0, /*pos*/  4200,     0, -4940),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,        /*yaw*/   0, /*pos*/  4740,     0, -4940),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,        /*yaw*/   0, /*pos*/  4740,     0, -4400),

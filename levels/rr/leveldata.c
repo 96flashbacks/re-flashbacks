@@ -64,5 +64,4 @@
 #include "levels/rr/tricky_triangles_4/collision.inc.c"
 #include "levels/rr/tricky_triangles_5/collision.inc.c"
 #include "levels/rr/areas/1/collision.inc.c"
-#include "levels/rr/areas/1/macro.inc.c"
 #include "levels/rr/areas/1/trajectory.inc.c"

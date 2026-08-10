@@ -8,7 +8,6 @@ const MacroObject thi_seg7_area_3_macro_objs[] = {
     MACRO_OBJECT(/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/ -1838,  1068,   338),
     MACRO_OBJECT(/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/  -240,  1500,  1040),
     MACRO_OBJECT(/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/ -1914,  1360, -1909),
-    MACRO_OBJECT(/*preset*/ macro_1up,                  /*yaw*/   0, /*pos*/ -1920,  1540, -1040),
     MACRO_OBJECT(/*preset*/ macro_coin_line_horizontal, /*yaw*/  45, /*pos*/ -1200,  2200, -1200),
     MACRO_OBJECT(/*preset*/ macro_coin_line_horizontal, /*yaw*/  45, /*pos*/  1200,  2200,  1200),
     MACRO_OBJECT(/*preset*/ macro_fire_spitter,         /*yaw*/   0, /*pos*/  -224,  1456,   672),

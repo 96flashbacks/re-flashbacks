@@ -8,7 +8,6 @@ const MacroObject cotmc_seg7_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_box_metal_cap,        /*yaw*/   0, /*pos*/   300,   620, -5280),
     MACRO_OBJECT               (/*preset*/ macro_snufit,               /*yaw*/   0, /*pos*/  -340,   260, -2620),
     MACRO_OBJECT               (/*preset*/ macro_coin_ring_horizontal, /*yaw*/   0, /*pos*/     0,  -450, -7000),
-    MACRO_OBJECT               (/*preset*/ macro_1up,                  /*yaw*/   0, /*pos*/   900,   260, -3620),
     MACRO_OBJECT               (/*preset*/ macro_coin_line_horizontal, /*yaw*/   0, /*pos*/     0,  -170, -1660),
     MACRO_OBJECT               (/*preset*/ macro_coin_line_horizontal, /*yaw*/   0, /*pos*/   -20,  -211, -3940),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,      /*yaw*/ 270, /*pos*/   -71,    20,   720, /*bhvParam*/ DIALOG_123),
@@ -20,6 +19,6 @@ const MacroObject cotmc_seg7_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/   250,   450, -6400),
     MACRO_OBJECT               (/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/   540,  -361, -6340),
     MACRO_OBJECT               (/*preset*/ macro_red_coin,             /*yaw*/   0, /*pos*/   980,   260, -3810),
-    MACRO_OBJECT               (/*preset*/ macro_box_1up_running_away, /*yaw*/   0, /*pos*/   -20,   180,  2060),
+    MACRO_OBJECT               (/*preset*/ macro_box_ten_coins, /*yaw*/   0, /*pos*/   -20,   180,  2060),
     MACRO_OBJECT_END(),
 };
