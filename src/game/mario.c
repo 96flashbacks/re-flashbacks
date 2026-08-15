@@ -1476,8 +1476,7 @@ void update_mario_health(struct MarioState *m) {
                 if (!(m->flags & MARIO_METAL_CAP) && !gDebugLevelSelect) {
                     m->health -= 4;
                 }
-            } else {
-                if ((m->action & ACT_FLAG_SWIMMING) && !(m->action & ACT_FLAG_INTANGIBLE)) {
+            } else if ((m->action & ACT_FLAG_SWIMMING) && !(m->action & ACT_FLAG_INTANGIBLE)) {
                     terrainIsSnow = (m->area->terrainType & TERRAIN_MASK) == TERRAIN_SNOW;
 
                     // When Mario is near the water surface, recover health (unless in snow),
@@ -1488,7 +1487,8 @@ void update_mario_health(struct MarioState *m) {
                     } else if (!gDebugLevelSelect) {
                         m->health -= (terrainIsSnow ? 3 : 1);
                     }
-                }
+            } else {
+                m->health += 0x2;
             }
         }
 
@@ -1511,16 +1511,6 @@ void update_mario_health(struct MarioState *m) {
         // Play a noise to alert the player when Mario is close to drowning.
         if (((m->action & ACT_GROUP_MASK) == ACT_GROUP_SUBMERGED) && (m->health < 0x300)) {
             play_sound(SOUND_MOVING_ALMOST_DROWNING, gGlobalSoundSource);
-#if ENABLE_RUMBLE
-            if (gRumblePakTimer == 0) {
-                gRumblePakTimer = 36;
-                if (is_rumble_finished_and_queue_empty()) {
-                    queue_rumble_data(3, 30);
-                }
-            }
-        } else {
-            gRumblePakTimer = 0;
-#endif
         }
     }
 }
