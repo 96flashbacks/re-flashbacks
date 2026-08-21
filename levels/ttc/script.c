@@ -17,17 +17,24 @@
 
 static const LevelScript script_func_local_1[] = {
     OBJECT(/*model*/ MODEL_NONE,   /*pos*/ -1080,  -840,  1573, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(86), /*bhv*/ bhvPoleGrabbing),
-    OBJECT(/*model*/ MODEL_THWOMP, /*pos*/  1919,  6191,  1919, /*angle*/ 0, 225, 0, /*bhvParam*/ BPARAM2(0),  /*bhv*/ bhvThwomp),
     RETURN(),
 };
 
 static const LevelScript script_func_local_2[] = {
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1450, -1130, -1050, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1850,   300,  -950, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1300, -2250, -1300, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/  2200,  7300,  2210, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1050,  2400,  -790, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,   /*pos*/  1815, -3200,   800, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvHiddenRedCoinStar, /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1680, -1340,  -820, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1840,    60,  -960, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1260, -2280, -1260, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1140, 6200,   -780, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,   /*pos*/ -1580, 3060,   -340, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5), /*bhv*/ bhvStar,                 /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,   /*pos*/  1815, -3200,   800, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvHiddenRedCoinStar, /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   800, -4400,  1900, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   800, -3700,  1900, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   800, -3000,  1900, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  1780, -3300,  1000, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  1388, -3300,  1428, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   200, -3000,  2000, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   200, -3700,  2000, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/   200, -4400,  2000, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
     RETURN(),
 };
 
