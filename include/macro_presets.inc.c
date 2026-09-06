@@ -96,7 +96,6 @@ static struct MacroPreset sMacroObjectPresets[] = {
     /* macro_fire_fly_guy                */ { bhvFlyGuy, MODEL_FLYGUY, FLY_GUY_BP_FIRE },
     /* macro_jumping_box                 */ { bhvJumpingBox, MODEL_BREAKABLE_BOX, 0 },
     /* macro_butterfly_triplet           */ { bhvTripletButterfly, MODEL_BUTTERFLY, 0 },
-    /* macro_butterfly_triplet_no_bombs  */ { bhvTripletButterfly, MODEL_BUTTERFLY, TRIPLET_BUTTERFLY_BP_NO_BOMBS },
     /* macro_empty_90                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_91                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_92                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },

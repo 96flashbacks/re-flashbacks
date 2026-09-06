@@ -91,7 +91,6 @@ enum MacroPresets {
     macro_fire_fly_guy,
     macro_jumping_box,
     macro_butterfly_triplet,
-    macro_butterfly_triplet_no_bombs,
     macro_empty_90,
     macro_empty_91,
     macro_empty_92,
