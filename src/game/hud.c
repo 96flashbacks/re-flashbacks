@@ -321,7 +321,7 @@ void render_hud_timer(void) {
     u16 timerSecs = (timerValFrames - (timerMins * 1800)) / 30;
     u16 timerFracSecs = ((u16) (timerValFrames - (timerMins * 1800) - (timerSecs * 30))) / 3;
 
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(150), 25, "TIME");
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(160), 185 - 165, "TIME");
 
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(99), 185 - 165, "%02d", timerMins);
     print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(69), 185 - 165, "%02d", timerSecs);
