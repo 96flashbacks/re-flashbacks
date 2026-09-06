@@ -40,6 +40,8 @@ static s16 sPlayMarioGameOver = TRUE;
 
 #define PRESS_START_DEMO_TIMER 800
 
+#define QUIT_LEVEL_SELECT_COMBO (Z_TRIG | START_BUTTON | L_CBUTTONS | R_CBUTTONS) // DEBUGKEY
+
 /**
  * Run the demo timer on the PRESS START screen after a number of frames.
  * This function returns the level ID from the first byte of a demo file.
@@ -130,8 +132,6 @@ s16 intro_level_select(void) {
     print_text_fmt_int(40, 60, "%2d", gCurrLevelNum);
     print_text(80, 60, sLevelSelectStageNames[gCurrLevelNum - 1]); // print stage name
 
-#define QUIT_LEVEL_SELECT_COMBO (Z_TRIG | START_BUTTON | L_CBUTTONS | R_CBUTTONS)
-
     // start being pressed signals the stage to be started. that is, unless...
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         // ... the level select quit combo is being pressed, which uses START. If this
@@ -168,6 +168,15 @@ s32 intro_regular(void) {
 #endif
     print_intro_text();
 
+// Code from 'title.c' to enable the debug level select
+#ifdef DEBUG
+    if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO) {
+        gDebugLevelSelect = TRUE;            
+    } else {
+        gDebugLevelSelect = FALSE;            
+    }
+#endif
+
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);
 #if ENABLE_RUMBLE
@@ -199,6 +208,15 @@ s32 intro_game_over(void) {
 #endif
 
     print_intro_text();
+
+// Code from 'title.c' to enable the debug level select
+#ifdef DEBUG
+    if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO) {
+        gDebugLevelSelect = TRUE;            
+    } else {
+        gDebugLevelSelect = FALSE;            
+    }
+#endif
 
     if (gPlayer1Controller->buttonPressed & START_BUTTON) {
         play_sound(SOUND_MENU_STAR_SOUND, gGlobalSoundSource);

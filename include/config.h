@@ -7,7 +7,7 @@
  * (maybe eventually) in SM64
  */
 
-// #define DEBUG
+#define DEBUG
 // #define FEBRUARY // DECEMBER, FEBRUARY and leaving undefined for the default March 1996
 #define NINTENDO_LOGO
 

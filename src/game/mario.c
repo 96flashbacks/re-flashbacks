@@ -1257,14 +1257,6 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->action != ACT_DEBUG_FREE_MOVE && m->controller->buttonPressed & D_JPAD) {
         set_mario_action(m, ACT_DEBUG_FREE_MOVE, 0);
     }
-#else
-    if (m->controller->buttonDown & U_JPAD) {
-        gShowDebugText = TRUE;
-    }
-
-    if (m->controller->buttonDown & D_JPAD) {
-        gShowDebugText = FALSE;
-    }
 #endif
     if (m->controller->buttonPressed & A_BUTTON) {
         m->input |= INPUT_A_PRESSED;
@@ -1888,5 +1880,7 @@ void init_mario_from_save_file(void) {
     gMarioState->unkB0 = 0xBD;
 
     gHudDisplay.coins = 0;
-    gHudDisplay.wedges = 8;
+    // 'gHudDisplay.wedges' is set to 0 instead of 8 so it plays the healing sound 
+    // when selecting a save file or entering a stage through debug level select
+    gHudDisplay.wedges = 0;
 }
