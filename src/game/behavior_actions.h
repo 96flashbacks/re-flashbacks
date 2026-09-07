@@ -50,7 +50,7 @@ void bhv_small_bubbles_loop(void);
 void bhv_fish_group_loop(void);
 void bhv_cannon_base_loop(void);
 void bhv_cannon_barrel_loop(void);
-void bhv_cannon_base_unused_loop(void);
+void bhv_cannon_burn_smoke_loop(void);
 void common_anchor_mario_behavior(f32 sp28, f32 sp2C, s32 sp30);
 void bhv_chuckya_loop(void);
 void bhv_chuckya_anchor_mario_loop(void);

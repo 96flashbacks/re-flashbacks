@@ -35,7 +35,7 @@ extern const BehaviorScript bhvSmallParticleBubbles[];
 extern const BehaviorScript bhvFishGroup[];
 extern const BehaviorScript bhvCannon[];
 extern const BehaviorScript bhvCannonBarrel[];
-extern const BehaviorScript bhvCannonBaseUnused[];
+extern const BehaviorScript bhvCannonBurnSmoke[];
 extern const BehaviorScript bhvChuckya[];
 extern const BehaviorScript bhvChuckyaAnchorMario[];
 extern const BehaviorScript bhvUnused05A8[];

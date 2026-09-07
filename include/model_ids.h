@@ -488,7 +488,7 @@
 // find me
 // find me
 #define MODEL_STAR_DUST                   0x9B        // star_dust_geo
-#define MODEL_BURN_SMOKE_UNUSED           0x9C        // burn_smoke_geo - unused & duplicated
+#define MODEL_CANNON_BURN_SMOKE           0x9C        // burn_smoke_geo - unused & duplicated
 // find me
 #define MODEL_WHITE_PARTICLE_DL           0x9E        // white_particle_dl
 #define MODEL_SAND_DUST                   0x9F        // sand_seg3_dl_0302BCD0

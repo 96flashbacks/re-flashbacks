@@ -89,7 +89,7 @@ const LevelScript level_main_scripts_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SPARKLES_ANIMATION,      sparkles_animation_geo),
     LOAD_MODEL_FROM_DL (MODEL_SAND_DUST,               sand_seg3_dl_0302BCD0,   LAYER_ALPHA),
 	LOAD_MODEL_FROM_GEO(MODEL_BUTTERFLY,               butterfly_geo),
-    LOAD_MODEL_FROM_GEO(MODEL_BURN_SMOKE_UNUSED,       burn_smoke_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_CANNON_BURN_SMOKE,       burn_smoke_geo),
     LOAD_MODEL_FROM_DL (MODEL_PEBBLE,                  pebble_seg3_dl_0301CB00, LAYER_ALPHA),
     LOAD_MODEL_FROM_GEO(MODEL_MIST,                    mist_geo),
     LOAD_MODEL_FROM_GEO(MODEL_WHITE_PUFF,              white_puff_geo),

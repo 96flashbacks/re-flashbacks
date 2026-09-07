@@ -1,10 +1,10 @@
 // cannon.inc.c
 
-void bhv_cannon_base_unused_loop(void) {
+void bhv_cannon_burn_smoke_loop(void) { // s_gas_b (unused in the final game)
     o->oPosY += o->oVelY;
 }
 
-void opened_cannon_act_0(void) {
+void opened_cannon_act_0(void) { // cannon_wait (modified)
     if (o->oTimer == 0) {
         o->oInteractStatus = 0;
         o->oPosX = o->oHomeX;
@@ -36,7 +36,7 @@ void opened_cannon_act_0(void) {
     }
 }
 
-void opened_cannon_act_4(void) {
+void opened_cannon_act_4(void) { // cannon_up
     if (o->oTimer == 0) {
         cur_obj_play_sound_2(SOUND_OBJ_CANNON1);
     }
@@ -52,7 +52,7 @@ void opened_cannon_act_4(void) {
     }
 }
 
-void opened_cannon_act_6(void) {
+void opened_cannon_act_6(void) { // cannon_Yanime
     if (o->oTimer == 0) {
         cur_obj_play_sound_2(SOUND_OBJ_CANNON2);
     }
@@ -76,7 +76,7 @@ void opened_cannon_act_6(void) {
     }
 }
 
-void opened_cannon_act_5(void) {
+void opened_cannon_act_5(void) { // cannon_Xanime
     if (o->oTimer == 0) {
         cur_obj_play_sound_2(SOUND_OBJ_CANNON3);
     }
@@ -93,8 +93,9 @@ void opened_cannon_act_5(void) {
     }
 }
 
-void opened_cannon_act_1(void) {
-    UNUSED u8 filler[4];
+void opened_cannon_act_1(void) { // cannon_stanby (modified)
+    UNUSED struct Object *smoke;
+    UNUSED f32 scale;
 
     cur_obj_become_intangible();
     cur_obj_disable_rendering();
@@ -103,18 +104,32 @@ void opened_cannon_act_1(void) {
     gMarioShotFromCannon = TRUE;
 }
 
-void opened_cannon_act_2(void) {
+void opened_cannon_act_2(void) { // cannon_fire
     o->oAction = 3;
 }
 
-void opened_cannon_act_3(void) {
-    UNUSED u8 filler[4];
+void opened_cannon_act_3(void) { // cannon_fireentry (modified)
+    struct Object *smoke;
+    f32 scale;
+
+    // Commented out cannon burn smoke code from pathcannon.p
+    if (o->oTimer < 30) {
+        smoke = spawn_object(o, MODEL_CANNON_BURN_SMOKE, bhvCannonBurnSmoke);
+        smoke->oMoveAngleYaw = random_u16();
+        smoke->oForwardVel = random_float() * 20.0f + 20.0f;
+        smoke->oVelY = coss(gMarioObject->oMoveAnglePitch) * 40.0f;
+        scale = random_float() * 3.0f + 3.0f;
+        smoke->header.gfx.scale[0] = scale;
+        smoke->header.gfx.scale[1] = scale;
+    }
+
     if (o->oTimer > 3) {
         o->oAction = 0;
     }
 }
 
-void (*sOpenedCannonActions[])(void) = {
+
+void (*sOpenedCannonActions[])(void) = { // cannon_modejmp
     opened_cannon_act_0,
     opened_cannon_act_1,
     opened_cannon_act_2,
@@ -124,7 +139,7 @@ void (*sOpenedCannonActions[])(void) = {
     opened_cannon_act_6,
 };
 
-void bhv_cannon_base_loop(void) {
+void bhv_cannon_base_loop(void) { // s_cannon_base
     cur_obj_call_action_function(sOpenedCannonActions);
 
     if (o->oCannonUnkF8 != 0) {
@@ -134,7 +149,7 @@ void bhv_cannon_base_loop(void) {
     o->oInteractStatus = 0;
 }
 
-void bhv_cannon_barrel_loop(void) {
+void bhv_cannon_barrel_loop(void) { // s_cannon_body
     struct Object *parent = o->parentObj;
 
     if (parent->header.gfx.node.flags & GRAPH_RENDER_ACTIVE) {

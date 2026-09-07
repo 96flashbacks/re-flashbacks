@@ -624,7 +624,7 @@ const BehaviorScript bhvFishGroup[] = {
     END_LOOP(),
 };
 
-const BehaviorScript bhvCannon[] = {
+const BehaviorScript bhvCannon[] = { // e_cannon & e_cannon_base
     BEGIN(OBJ_LIST_LEVEL),
     OR_INT(oFlags, (OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SPAWN_CHILD(/*Model*/ MODEL_CANNON_BARREL, /*Behavior*/ bhvCannonBarrel),
@@ -638,7 +638,7 @@ const BehaviorScript bhvCannon[] = {
     END_LOOP(),
 };
 
-const BehaviorScript bhvCannonBarrel[] = {
+const BehaviorScript bhvCannonBarrel[] = { // e_cannon_body
     BEGIN(OBJ_LIST_DEFAULT),
     OR_INT(oFlags, (OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     DROP_TO_FLOOR(),
@@ -647,13 +647,13 @@ const BehaviorScript bhvCannonBarrel[] = {
     END_LOOP(),
 };
 
-const BehaviorScript bhvCannonBaseUnused[] = {
+const BehaviorScript bhvCannonBurnSmoke[] = { // e_gas_b (called 'bhvCannonBaseUnused' in the decomp)
     BEGIN(OBJ_LIST_DEFAULT),
     OR_INT(oFlags, (OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_MOVE_XZ_USING_FVEL | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     BILLBOARD(),
     SET_INT(oAnimState, -1),
     BEGIN_REPEAT(8),
-        CALL_NATIVE(bhv_cannon_base_unused_loop),
+        CALL_NATIVE(bhv_cannon_burn_smoke_loop),
         ADD_INT(oAnimState, 1),
     END_REPEAT(),
     DEACTIVATE(),
@@ -1506,7 +1506,7 @@ const BehaviorScript bhvBlackSmokeMario[] = {
     SET_INT(oAnimState, -1),
     SET_FLOAT(oGraphYOffset, 50),
     BEGIN_REPEAT(8),
-		ADD_INT(oAnimState, 1),
+        ADD_INT(oAnimState, 1),
         CALL_NATIVE(bhv_black_smoke_mario_loop),
         DELAY(1),
         CALL_NATIVE(bhv_black_smoke_mario_loop),
