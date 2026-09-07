@@ -194,13 +194,14 @@ void king_bobomb_act_6(void) {
 
 void king_bobomb_act_7(void) {
     cur_obj_hide();
-    cur_obj_become_intangible();
-    spawn_mist_particles_variable(0, 0, 200.0f);
-    spawn_triangle_break_particles(20, 138, 3.0f, 4);
-    cur_obj_shake_screen(SHAKE_POS_SMALL);
-    o->oPosY += 100.0f;
-    spawn_default_star(o->oPosX, 4535.0f, o->oPosZ);
-    o->oAction = 8;
+    if (o->oTimer == 0) {
+        cur_obj_become_intangible();
+        spawn_mist_particles_variable(0, 0, 200.0f);
+        spawn_triangle_break_particles(20, 138, 3.0f, 4);
+        cur_obj_shake_screen(SHAKE_POS_SMALL);
+        o->oPosY += 100.0f;
+        spawn_default_star(o->oPosX, 4500.0f, o->oPosZ);
+    }
 }
 
 void king_bobomb_act_4(void) { // bobomb been thrown

@@ -34,14 +34,12 @@ void bhv_collect_star_loop(void) {
     }
 }
 
+// The star spawn behavior is much simpler, it's based on the E3 1996 B-Roll footage
 void bhv_star_spawn_init(void) {
-    o->oVelY = 1.5f;
-    o->oForwardVel = o->oStarSpawnDisFromHome / 30.0f;
-    o->oStarSpawnUnkFC = o->oPosY;
     o->oPosX = o->oHomeX;
-    o->oPosY = o->oHomeY;
     o->oPosZ = o->oHomeZ;
-    cur_obj_unused_init_on_floor();
+    o->oPosY = (find_floor_height(o->oPosX, o->oHomeY, o->oPosZ)) + 80.0f;
+    o->oVelY = (o->oHomeY - o->oPosY) / 120.0f;
     cur_obj_become_intangible();
 }
 
@@ -50,35 +48,23 @@ void bhv_star_spawn_loop(void) {
         case 0:
             o->oFaceAngleYaw += 0x2400;
             spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
-            cur_obj_become_intangible(); // to prevent getting star during rise
-            if (o->oTimer == 61)
+            if (o->oTimer == 65)
                 o->oAction = 1;
             break;
 
         case 1:
             obj_move_xyz_using_fvel_and_yaw(o);
-            o->oStarSpawnUnkFC += o->oVelY;
+            o->oPosY += o->oVelY;
             o->oFaceAngleYaw += 0x2400;
             spawn_object(o, MODEL_NONE, bhvSparkleSpawn);
             if (o->oPosY > o->oHomeY) {
-                o->oAction = 3;
-                if (o->oAction == 3) {
-                    cur_obj_become_tangible();
-                }
-                o->oForwardVel = 0;
-            }
-            if (o->oPosY > o->oHomeY) {
-                o->oVelY = 0;
-                o->oForwardVel = 0;
                 cur_obj_become_tangible();
+                o->oAction = 2;
             }
             break;
 
-        case 3:
+        case 2:
             o->oFaceAngleYaw += 0x800;
-            if (o->oTimer == 0) {
-                clear_time_stop_flags(TIME_STOP_ENABLED | TIME_STOP_MARIO_AND_DOORS);
-            }
 
             if (o->oInteractStatus & INT_STATUS_INTERACTED) {
                 mark_obj_for_deletion(o);
