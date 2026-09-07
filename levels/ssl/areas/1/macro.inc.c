@@ -12,6 +12,8 @@ const MacroObject ssl_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  3800,     0,  6000),
     MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  1750,     0,  6450),
     MACRO_OBJECT(/*preset*/ macro_coin_line_horizontal,      /*yaw*/  90, /*pos*/ -2290,   787, -2180),
+    MACRO_OBJECT(/*preset*/ macro_box_wing_cap,              /*yaw*/   0, /*pos*/  4850,   300, -5900),
+    MACRO_OBJECT(/*preset*/ macro_box_koopa_shell,           /*yaw*/   0, /*pos*/ -6000,   300, -4000),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/   0, /*pos*/  5130,    26,  -370, /*bhvParam*/ DIALOG_157),
     MACRO_OBJECT_END(),
 };
