@@ -15,5 +15,6 @@ const MacroObject wf_seg7_macro_objs[] = {
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/  90, /*pos*/  1600,  2560,  2600, /*bhvParam*/ DIALOG_042),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/ 180, /*pos*/  3460,  2304,   -40, /*bhvParam*/ DIALOG_096),
 	MACRO_OBJECT               (/*preset*/ macro_butterfly_triplet,           /*yaw*/   0, /*pos*/  4574,   300,  1130),
+    MACRO_OBJECT               (/*preset*/ macro_box_vanish_cap,       /*yaw*/   0, /*pos*/ 1270, 4100,  930),
     MACRO_OBJECT_END(),
 };
