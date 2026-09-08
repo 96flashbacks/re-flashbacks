@@ -52,7 +52,7 @@ static const LevelScript script_func_local_2[] = {
 static const LevelScript script_func_local_3[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_KING_BOBOMB,           /*pos*/  1636, 4242, -5567, /*angle*/ 0, -147, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvKingBobomb,            /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/ -4004,    0,  5221, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2) | BPARAM2(KOOPA_BP_KOOPA_THE_QUICK_BOB), /*bhv*/ bhvKoopa,                 /*acts*/ ACT_2),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/ -6000, 1000,  2400, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvHiddenRedCoinStar,     /*acts*/ ACT_4),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/ -5500, 1500,  2300, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvHiddenRedCoinStar,     /*acts*/ ACT_6),
     OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/ -6600, 1000,  1250, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5) | BPARAM2(0x04), /*bhv*/ bhvHiddenStar,            /*acts*/ ALL_ACTS),
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  1550, 1200,   300, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvStar,                  /*acts*/ ALL_ACTS),
     RETURN(),
