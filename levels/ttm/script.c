@@ -22,8 +22,6 @@ static const LevelScript script_func_local_1[] = {
 
 static const LevelScript script_func_local_2[] = {
     OBJECT          (/*model*/ MODEL_NONE,               /*pos*/ -1639,  1146, -1742, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(BBALL_BP_STYPE_TTM), /*bhv*/ bhvTTMBowlingBallSpawner),
-    OBJECT          (/*model*/ MODEL_NONE,               /*pos*/  3295, -3692,  2928, /*angle*/ 0,   0, 0, /*bhvParam*/ 0, /*bhv*/ bhvWaterfallSoundLoop),
-    OBJECT          (/*model*/ MODEL_NONE,               /*pos*/  2004, -1580,  1283, /*angle*/ 0,   0, 0, /*bhvParam*/ 0, /*bhv*/ bhvWaterfallSoundLoop),
     OBJECT          (/*model*/ MODEL_DL_MONTY_MOLE_HOLE, /*pos*/ -2077, -1023, -1969, /*angle*/ 0,   0, 0, /*bhvParam*/ 0, /*bhv*/ bhvMontyMoleHole),
     OBJECT          (/*model*/ MODEL_DL_MONTY_MOLE_HOLE, /*pos*/ -2500, -1023, -2157, /*angle*/ 0,   0, 0, /*bhvParam*/ 0, /*bhv*/ bhvMontyMoleHole),
     OBJECT          (/*model*/ MODEL_DL_MONTY_MOLE_HOLE, /*pos*/ -2048, -1023, -2307, /*angle*/ 0,   0, 0, /*bhvParam*/ 0, /*bhv*/ bhvMontyMoleHole),
@@ -37,17 +35,24 @@ static const LevelScript script_func_local_2[] = {
     OBJECT          (/*model*/ MODEL_MONTY_MOLE,         /*pos*/     0,     0,     0, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(MONTY_MOLE_BP_GENERIC), /*bhv*/ bhvMontyMole),
     OBJECT          (/*model*/ MODEL_NONE,               /*pos*/  3625,   560,   165, /*angle*/ 0, 330, 0, /*bhvParam*/ BPARAM2(CLOUD_BP_FWOOSH), /*bhv*/ bhvCloud),
     OBJECT_WITH_ACTS(/*model*/ MODEL_UKIKI,              /*pos*/   729,  2307,   335, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(UKIKI_BP_CAGE), /*bhv*/ bhvUkiki,       /*acts*/ ACT_2),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_UKIKI,              /*pos*/  1992, -1548,  2944, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(UKIKI_BP_CAP), /*bhv*/ bhvUkiki,       /*acts*/ ALL_ACTS),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  1450, -2750, -4250, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  2550, -2750, -3400, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  4150, -2700, -2800, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -1600, -1650, -2500, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -1200, -1600, -3250, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -1850,   100, -2850, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -1500,  -800, -2750, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  1840, -2880, -3600, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
     RETURN(),
 };
 
 static const LevelScript script_func_local_3[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,           /*pos*/  1200,  2600,   150, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvStar,              /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_TTM_STAR_CAGE,  /*pos*/  2496,  1670,  1492, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2), /*bhv*/ bhvUkikiCage,         /*acts*/ ACT_2),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,           /*pos*/ -3250, -2500, -3700, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3), /*bhv*/ bhvHiddenRedCoinStar, /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,           /*pos*/ -3250, -2500, -3700, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvHiddenRedCoinStar, /*acts*/ ACT_6),
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,           /*pos*/ -2900, -2700,  3650, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvStar,              /*acts*/ ALL_ACTS),
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,           /*pos*/  1800,  1200,  1050, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5), /*bhv*/ bhvStar,              /*acts*/ ALL_ACTS),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,           /*pos*/  7300, -3100,  1300, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvStar,              /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,           /*pos*/  7300, -3100,  1300, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3), /*bhv*/ bhvStar,              /*acts*/ ALL_ACTS),
     RETURN(),
 };
 
