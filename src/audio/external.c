@@ -122,7 +122,7 @@ STATIC_ASSERT(ARRAY_COUNT(sDialogSpeaker) == DIALOG_COUNT,
 s32 sDialogSpeakerVoice[] = {
     SOUND_OBJ_UKIKI_CHATTER_LONG,
     SOUND_OBJ_BIG_PENGUIN_YELL,
-    SOUND_OBJ_BOWSER_INTRO_LAUGH,
+    NO_SOUND,
     SOUND_OBJ_KOOPA_TALK,
     SOUND_OBJ_KING_BOBOMB_TALK,
     SOUND_OBJ_BOO_LAUGH_LONG,
@@ -2351,12 +2351,6 @@ void play_dialog_sound(u8 dialogID) {
         }
     }
 
-#ifndef VERSION_JP
-    // "You've stepped on the (Wing|Metal|Vanish) Cap Switch"
-    if (dialogID == DIALOG_010 || dialogID == DIALOG_011 || dialogID == DIALOG_012) {
-        play_puzzle_jingle();
-    }
-#endif
 }
 
 /**
