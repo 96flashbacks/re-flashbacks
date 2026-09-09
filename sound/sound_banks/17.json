@@ -93,7 +93,7 @@
         "inst4": {
             "release_rate": 10,
             "envelope": "envelope4",
-            "sound": "26_crystal_rhodes_C4"
+            "sound": "42_vibraphone_F#4"
         },
         "percussion": [
             {"release_rate": 10, "pan": 62, "envelope": "envelope5", "sound": {"sample": "06_kick_drum_1", "tuning": 0.210224}},
