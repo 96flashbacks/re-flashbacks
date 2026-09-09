@@ -3,7 +3,7 @@ const MacroObject ttm_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_cannon_open,                 /*yaw*/  45, /*pos*/  5035, -3994, -3445, /*bhvParam*/ 0xC0),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/  90, /*pos*/  3644, -1304,  1422, /*bhvParam*/ DIALOG_072),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/   0, /*pos*/   622, -4331,  5466, /*bhvParam*/ DIALOG_094),
-    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/  90, /*pos*/ -1126, -2593, -4400, /*bhvParam*/ DIALOG_091),
+    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/  90, /*pos*/ -1262, -2592, -4586, /*bhvParam*/ DIALOG_091),
     MACRO_OBJECT               (/*preset*/ macro_goomba_triplet_spawner,      /*yaw*/   0, /*pos*/  1740, -4236,  5320),
     MACRO_OBJECT               (/*preset*/ macro_coin_ring_horizontal,        /*yaw*/   0, /*pos*/  4540, -4607,  1060),
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/ -3507, -2480, -1046),
