@@ -86,7 +86,6 @@ s32 check_common_hold_idle_cancels(struct MarioState *m) {
     }
 
     if (m->input & INPUT_NONZERO_ANALOG) {
-        m->faceAngle[1] = (s16) m->intendedYaw;
         return set_mario_action(m, ACT_HOLD_WALKING, 0);
     }
 

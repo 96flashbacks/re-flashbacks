@@ -471,51 +471,6 @@ void warp_level(void) {
     init_mario_after_warp();
 }
 
-void warp_credits(void) {
-    s32 marioAction;
-
-    switch (sWarpDest.nodeId) {
-        case WARP_NODE_CREDITS_START:
-            marioAction = ACT_END_PEACH_CUTSCENE;
-            break;
-
-        case WARP_NODE_CREDITS_NEXT:
-            marioAction = ACT_CREDITS_CUTSCENE;
-            break;
-
-        case WARP_NODE_CREDITS_END:
-            marioAction = ACT_END_WAVING_CUTSCENE;
-            break;
-    }
-
-    gCurrLevelNum = sWarpDest.levelNum;
-
-    load_area(sWarpDest.areaIdx);
-
-    vec3s_set(gPlayerSpawnInfos[0].startPos, gCurrCreditsEntry->marioPos[0],
-              gCurrCreditsEntry->marioPos[1], gCurrCreditsEntry->marioPos[2]);
-
-    vec3s_set(gPlayerSpawnInfos[0].startAngle, 0, gCurrCreditsEntry->marioAngle << 8, 0);
-
-    gPlayerSpawnInfos[0].areaIndex = sWarpDest.areaIdx;
-
-    load_mario_area();
-    init_mario();
-
-    set_mario_action(gMarioState, marioAction, 0);
-
-    reset_camera(gCurrentArea->camera);
-
-    sWarpDest.type = WARP_TYPE_NOT_WARPING;
-    sDelayedWarpOp = WARP_OP_NONE;
-
-    play_transition(WARP_TRANSITION_FADE_FROM_COLOR, 0x14, 0x00, 0x00, 0x00);
-
-    if (gCurrCreditsEntry == NULL || gCurrCreditsEntry == sCreditsSequence) {
-        set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
-    }
-}
-
 void check_instant_warp(void) {
     s16 cameraAngle;
     struct Surface *floor;

@@ -7475,13 +7475,6 @@ BAD_RETURN(s32) cutscene_bowser_arena_pan_left(UNUSED struct Camera *c) {
     approach_f32_asymptotic_bool(&sCutsceneVars[0].point[2], 0.f, 0.05f);
 }
 
-/**
- * Duplicate of cutscene_mario_dialog().
- */
-BAD_RETURN(s32) cutscene_bowser_arena_mario_dialog(UNUSED struct Camera *c) {
-    cutscene_common_set_dialog_state(MARIO_DIALOG_LOOK_FRONT);
-}
-
 void cutscene_stop_dialog(UNUSED struct Camera *c) {
     cutscene_common_set_dialog_state(MARIO_DIALOG_STOP);
 }
@@ -7562,7 +7555,6 @@ BAD_RETURN(s32) cutscene_bowser_arena(struct Camera *c) {
     cutscene_spawn_obj(2, 0);
 
     if (gSecondCameraFocus != NULL) {
-        cutscene_event(cutscene_bowser_arena_mario_dialog, c, 0, -1);
         cutscene_event(cutscene_bowser_arena_start, c, 0, 5);
         cutscene_event(cutscene_bowser_area_start_bowser_walking, c, 40, 40);
         cutscene_event(cutscene_bowser_area_shake_fov, c, 145, 145);

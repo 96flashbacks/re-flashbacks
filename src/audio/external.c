@@ -127,16 +127,13 @@ s32 sDialogSpeakerVoice[] = {
     SOUND_OBJ_KING_BOBOMB_TALK,
     SOUND_OBJ_BOO_LAUGH_LONG,
     SOUND_OBJ_BOBOMB_BUDDY_TALK,
-    SOUND_OBJ_BOWSER_LAUGH,
     SOUND_OBJ2_BOSS_DIALOG_GRUNT,
     SOUND_OBJ_WIGGLER_TALK,
     SOUND_GENERAL_YOSHI_TALK,
-#if defined(VERSION_JP) || defined(VERSION_US)
     NO_SOUND,
     NO_SOUND,
     NO_SOUND,
     NO_SOUND,
-#endif
 };
 
 u8 sNumProcessedSoundRequests = 0;
@@ -2607,9 +2604,6 @@ void func_803210D4(u16 fadeDuration) {
 void play_course_clear(void) {
     seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_CUTSCENE_COLLECT_STAR, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 0;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2619,9 +2613,6 @@ void play_course_clear(void) {
 void play_peachs_jingle(void) {
     seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_PEACH_MESSAGE, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 0;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2635,9 +2626,6 @@ void play_peachs_jingle(void) {
 void play_puzzle_jingle(void) {
     seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_SOLVE_PUZZLE, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 20;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2645,11 +2633,7 @@ void play_puzzle_jingle(void) {
  * Called from threads: thread5_game_loop
  */
 void play_star_fanfare(void) {
-    seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_HIGH_SCORE, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 20;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2660,23 +2644,7 @@ void play_power_star_jingle(u8 arg0) {
     if (!arg0) {
         sBackgroundMusicTargetVolume = 0;
     }
-    seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_CUTSCENE_STAR_SPAWN, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 20;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
-    begin_background_music_fade(50);
-}
-
-/**
- * Called from threads: thread5_game_loop
- */
-void play_race_fanfare(void) {
-    seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_RACE, 0);
-    sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 20;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2686,9 +2654,6 @@ void play_race_fanfare(void) {
 void play_toads_jingle(void) {
     seq_player_play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_TOAD_MESSAGE, 0);
     sBackgroundMusicMaxTargetVolume = TARGET_VOLUME_IS_PRESENT_FLAG | 20;
-#if defined(VERSION_EU) || defined(VERSION_SH) || defined(VERSION_CN)
-    D_EU_80300558 = 2;
-#endif
     begin_background_music_fade(50);
 }
 
@@ -2696,23 +2661,10 @@ void play_toads_jingle(void) {
  * Called from threads: thread5_game_loop
  */
 void sound_reset(u8 presetId) {
-#ifndef VERSION_JP
-    if (presetId >= 8) {
-        presetId = 0;
-        sUnused8033323C = 0;
-    }
-#endif
     sGameLoopTicked = 0;
     disable_all_sequence_players();
     sound_init();
-#if defined(VERSION_SH) || defined(VERSION_CN)
-    func_802ad74c(0xF2000000, 0);
-#endif
-#if defined(VERSION_JP) || defined(VERSION_US)
     audio_reset_session(&gAudioSessionPresets[presetId]);
-#else
-    audio_reset_session_eu(presetId);
-#endif
     osWritebackDCacheAll();
     if (presetId != 7) {
         preload_sequence(SEQ_EVENT_SOLVE_PUZZLE, PRELOAD_BANKS | PRELOAD_SEQUENCE);
@@ -2733,10 +2685,8 @@ void audio_set_sound_mode(u8 soundMode) {
     gSoundMode = soundMode;
 }
 
-#if defined(VERSION_JP) || defined(VERSION_US)
 void unused_80321460(UNUSED s32 arg0, UNUSED s32 arg1, UNUSED s32 arg2, UNUSED s32 arg3) {
 }
 
 void unused_80321474(UNUSED s32 arg0) {
 }
-#endif

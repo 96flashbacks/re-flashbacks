@@ -706,8 +706,6 @@ static void koopa_the_quick_act_after_race(void) {
 
     if (o->parentObj->oKoopaRaceEndpointDialog == 0) {
         if (cur_obj_can_mario_activate_textbox_2(400.0f, 400.0f)) {
-            stop_background_music(SEQUENCE_ARGS(4, SEQ_LEVEL_SLIDE));
-
             // Determine which text to display
 
             if (o->parentObj->oKoopaRaceEndpointRaceStatus != 0) {
@@ -836,7 +834,6 @@ void bhv_koopa_race_endpoint_update(void) {
             level_control_timer(TIMER_CONTROL_STOP);
 
             if (!o->oKoopaRaceEndpointKoopaFinished) {
-                play_race_fanfare();
                 if (gMarioShotFromCannon) {
                     o->oKoopaRaceEndpointRaceStatus = -1;
                 } else {
