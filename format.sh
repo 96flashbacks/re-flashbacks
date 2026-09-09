@@ -10,5 +10,5 @@ fi
 echo formatting...
 clang-format -i -style=file src/**/*.c # src
 clang-format -i -style=file lib/src/*.c # libultra
-clang-format -i -style=file enhancements/*.inc.c # enhancements
+#clang-format -i -style=file enhancements/*.inc.c # enhancements
 echo done.

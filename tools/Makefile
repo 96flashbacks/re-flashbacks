@@ -7,7 +7,7 @@ CC           := gcc
 CXX          := g++
 CFLAGS       := -I . -I sm64tools -Wall -Wextra -Wno-unused-parameter -pedantic -O2 -s
 LDFLAGS      := -lm
-ALL_PROGRAMS := armips textconv patch_elf_32bit aifc_decode aiff_extract_codebook vadpcm_enc tabledesign extract_data_for_mio skyconv flips
+ALL_PROGRAMS := armips textconv patch_elf_32bit aifc_decode aiff_extract_codebook vadpcm_enc tabledesign extract_data_for_mio skyconv slienc
 LIBAUDIOFILE := audiofile/libaudiofile.a
 
 # Only build armips from tools if it is not found on the system
@@ -41,10 +41,14 @@ skyconv_SOURCES := skyconv.c sm64tools/n64graphics.c sm64tools/utils.c
 
 armips: CC := $(CXX)
 armips_SOURCES := armips.cpp
-armips_CFLAGS  := -std=c++11 -fno-exceptions -fno-rtti -pipe
+armips_CFLAGS  := -std=gnu++11 -fno-exceptions -fno-rtti -pipe
 armips_LDFLAGS := -pthread
 ifeq ($(HOST_ENV),MinGW)
   armips_LDFLAGS += -municode
+endif
+
+ifeq ($(shell uname -s),Linux)
+  BUILD_PROGRAMS += flips
 endif
 
 flips: CC := $(CXX)
@@ -55,6 +59,9 @@ flips_CFLAGS := -Wall -Wextra -fopenmp -Os -flto -fuse-linker-plugin -fomit-fram
 -fvisibility=hidden -fno-exceptions -fno-rtti -fno-unwind-tables -fno-asynchronous-unwind-tables \
 -ffunction-sections -fdata-sections -Wl,--gc-sections  \
 -Wl,-z,relro,-z,now,--as-needed,--hash-style=gnu,--relax
+
+slienc_SOURCES := slienc.c
+slienc_CFLAGS :=
 
 all-except-recomp: $(LIBAUDIOFILE) $(BUILD_PROGRAMS)
 
