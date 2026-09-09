@@ -1173,7 +1173,7 @@ s32 bowser_dead_wait_for_mario(void) {
 s32 bowser_dead_twirl_up(void) {
     s32 ret = FALSE;
     struct Object *mist;
-	
+    
     o->oBowserEyesShut = TRUE;
 
     // Slowly scale down his X and Z value
@@ -1342,18 +1342,19 @@ struct BowserTiltPlatformInfo {
  * Data for the BitFS tilt Platform
  */
 struct BowserTiltPlatformInfo sBowsertiltPlatformData[] = {
-    {  1,   10,  40 },
-    {  0,    0,  74 },
-    { -1,  -10, 114 },
-    {  1,  -20, 134 },
-    { -1,   20, 154 },
-    {  1,   40, 164 },
-    { -1,  -40, 174 },
-    {  1,  -80, 179 },
-    { -1,   80, 184 },
-    {  1,  160, 186 },
-    { -1, -160, 186 },
-    {  1,    0,   0 },
+    // Earlier "kopabg_timedata" from 'pathkopa.p'
+    {  1,   10, 34                       },
+    {  0,    0, 34+34                    },
+    { -1,  -10, 34+34+34                 },
+    {  1,  -20, 34+34+34+17              },
+    { -1,   20, 34+34+34+17+17           },
+    {  1,   40, 34+34+34+17+17+8         },
+    { -1,  -40, 34+34+34+17+17+8+8       },
+    {  1,  -80, 34+34+34+17+17+8+8+4     },
+    { -1,   80, 34+34+34+17+17+8+8+4+4   },
+    {  1,  160, 34+34+34+17+17+8+8+4+4+2 },
+    { -1, -160, 34+34+34+17+17+8+8+4+4+2 },
+    {  1,    0, 0                        },
 };
 
 /**
@@ -1677,7 +1678,7 @@ void bhv_bowser_loop(void) {
  */
 void bhv_bowser_init(void) {
     s32 level;
-	bowserTimer = 0;
+    bowserTimer = 0;
     // Set "reaction" value
     // It goes true when Bowser is a non-walking state
     o->oBowserIsReacting = TRUE;
