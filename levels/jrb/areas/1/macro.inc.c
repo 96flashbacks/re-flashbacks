@@ -1,6 +1,6 @@
 // 0x0700C4E8 - 0x0700C756
 const MacroObject jrb_seg7_area_1_macro_objs[] = {
-    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/ 250, /*pos*/ -6325,  1126,  1730, /*bhvParam*/ DIALOG_060),
+    MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/ 250, /*pos*/ -6316,  1126,  1300, /*bhvParam*/ DIALOG_060),
     MACRO_OBJECT               (/*preset*/ macro_coin_ring_vertical_flying,   /*yaw*/   0, /*pos*/  5060, -4420,   720),
     MACRO_OBJECT               (/*preset*/ macro_box_metal_cap,               /*yaw*/   0, /*pos*/  2077,  1832,  7465),
     MACRO_OBJECT               (/*preset*/ macro_coin_ring_horizontal_flying, /*yaw*/   0, /*pos*/ -1780,  -650,  4200),
@@ -40,8 +40,8 @@ const MacroObject jrb_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_box_metal_cap,               /*yaw*/   0, /*pos*/ -7160,  1340,  2580),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/ 180, /*pos*/ -6910,  1120,  2380, /*bhvParam*/ DIALOG_113),
     MACRO_OBJECT               (/*preset*/ macro_box_three_coins,             /*yaw*/   0, /*pos*/ -5800,  1340,  -750),
-    MACRO_OBJECT               (/*preset*/ macro_koopa_shell_underwater,      /*yaw*/   0, /*pos*/ -1480, -1000,  4820),
-    MACRO_OBJECT               (/*preset*/ macro_clam_shell,                  /*yaw*/ 180, /*pos*/ -1480, -1040,  4820),
+    MACRO_OBJECT               (/*preset*/ macro_koopa_shell_underwater,      /*yaw*/   0, /*pos*/ -3450,    10,  2550),
+    MACRO_OBJECT               (/*preset*/ macro_clam_shell,                  /*yaw*/   0, /*pos*/ -3450,     0,  2550),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/   0, /*pos*/  5290, -2966, -4740, /*bhvParam*/ DIALOG_169),
     MACRO_OBJECT_END(),
 };
