@@ -871,9 +871,6 @@ static void common_water_knockback_step(struct MarioState *m, s32 animation, u32
     m->marioBodyState->headAngle[0] = 0;
 
     if (is_anim_at_end(m)) {
-        if (arg3 > 0) {
-            m->invincTimer = 30;
-        }
 
         set_mario_action(m, m->health >= 0x100 ? endAction : ACT_WATER_DEATH, 0);
     }
@@ -900,7 +897,6 @@ static s32 act_water_shocked(struct MarioState *m) {
     }
 
     if (m->actionTimer >= 6) {
-        m->invincTimer = 30;
         set_mario_action(m, m->health < 0x100 ? ACT_WATER_DEATH : ACT_WATER_IDLE, 0);
     }
 
