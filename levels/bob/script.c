@@ -34,10 +34,9 @@ static const LevelScript script_func_local_2[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOWLING_BALL,          /*pos*/   -93,  886, -3414, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvPitBowlingBall,         /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOBOMB_BUDDY,          /*pos*/ -4554,    0,  4994, /*angle*/ 0, 0, 0,   /*behParam*/ DIALOG_002 << 16, /*beh*/ bhvBobombBuddy,            /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOBOMB_BUDDY,          /*pos*/ -4554,    0,  4994, /*angle*/ 0, 0, 0,   /*behParam*/ 0x00000000,       /*beh*/ bhvBobombBuddyOpensCannon, /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_CANNON_BASE,           /*pos*/ -5694,  128,  5600, /*angle*/ 0, 135, 0, /*bhvParam*/ BPARAM2(0x01), /*bhv*/ bhvWaterBombCannon,        /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_DL_CANNON_LID,         /*pos*/ -5694,  128,  5600, /*angle*/ 0, 180, 0, /*bhvParam*/ BPARAM2(0x00), /*bhv*/ bhvCannonClosed,           /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  3304, 4242, -4603, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvKoopaRaceEndpoint,      /*acts*/ ACT_2),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/  3400,  770,  6500, /*angle*/ 0, 0, 0,   /*bhvParam*/ BPARAM2(KOOPA_BP_NORMAL), /*bhv*/ bhvKoopa,                  /*acts*/ ACT_3 | ACT_4 | ACT_5 | ACT_6),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  3304, 4242, -4603, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvKoopaRaceEndpoint,      /*acts*/ ACT_3),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/  3400,  770,  6500, /*angle*/ 0, 0, 0,   /*bhvParam*/ BPARAM2(KOOPA_BP_NORMAL), /*bhv*/ bhvKoopa,                  /*acts*/ ACT_4 | ACT_5 | ACT_6),
 	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -4850,  768,  2400, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
     OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -6100,  768,  2400, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
 	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/  1135, 1920, -7161, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
@@ -51,10 +50,10 @@ static const LevelScript script_func_local_2[] = {
 
 static const LevelScript script_func_local_3[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_KING_BOBOMB,           /*pos*/  1636, 4242, -5567, /*angle*/ 0, -147, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvKingBobomb,            /*acts*/ ACT_1),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/ -4004,    0,  5221, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2) | BPARAM2(KOOPA_BP_KOOPA_THE_QUICK_BOB), /*bhv*/ bhvKoopa,                 /*acts*/ ACT_2),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  -600, 4400,   600, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3), /*bhv*/ bhvStar,                  /*acts*/ ALL_ACTS),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  1161, 4414,  -101, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_2), /*bhv*/ bhvStar,                  /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/ -3000,  121,  5300, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_3) | BPARAM2(KOOPA_BP_KOOPA_THE_QUICK_BOB), /*bhv*/ bhvKoopa,                 /*acts*/ ACT_3),
     OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/ -5500, 1500,  2300, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_4), /*bhv*/ bhvHiddenRedCoinStar,     /*acts*/ ACT_6),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/ -6600, 1000,  1250, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5) | BPARAM2(0x04), /*bhv*/ bhvHiddenStar,            /*acts*/ ALL_ACTS),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  -600, 4400,   600, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_5) | BPARAM2(0x04), /*bhv*/ bhvHiddenStar,            /*acts*/ ALL_ACTS),
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  1550, 1200,   300, /*angle*/ 0, 0, 0,    /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_6), /*bhv*/ bhvStar,                  /*acts*/ ALL_ACTS),
     RETURN(),
 };
