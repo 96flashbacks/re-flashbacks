@@ -34,7 +34,12 @@ static const LevelScript script_func_local_2[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOWLING_BALL,          /*pos*/   -93,  886, -3414, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvPitBowlingBall,         /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOBOMB_BUDDY,          /*pos*/ -4554,    0,  4994, /*angle*/ 0, 0, 0,   /*behParam*/ DIALOG_002 << 16, /*beh*/ bhvBobombBuddy,            /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_BOBOMB_BUDDY,          /*pos*/ -4554,    0,  4994, /*angle*/ 0, 0, 0,   /*behParam*/ 0x00000000,       /*beh*/ bhvBobombBuddyOpensCannon, /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
-    OBJECT_WITH_ACTS(/*model*/ MODEL_DL_CANNON_LID,         /*pos*/ -5694,  128,  5600, /*angle*/ 0, 180, 0, /*bhvParam*/ BPARAM2(0x00), /*bhv*/ bhvCannonClosed,           /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
+	#ifndef DECEMBER
+	OBJECT_WITH_ACTS(/*model*/ MODEL_CANNON_BASE,           /*pos*/ -5694,  128,  5600, /*angle*/ 0, 135, 0, /*bhvParam*/ BPARAM2(0x01), /*bhv*/ bhvWaterBombCannon,        /*acts*/ ACT_1),
+	OBJECT_WITH_ACTS(/*model*/ MODEL_DL_CANNON_LID,         /*pos*/ -5694,  128,  5600, /*angle*/ 0, 180, 0, /*bhvParam*/ BPARAM2(0x00), /*bhv*/ bhvCannonClosed,           /*acts*/ ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
+    #else
+	OBJECT_WITH_ACTS(/*model*/ MODEL_DL_CANNON_LID,         /*pos*/ -5694,  128,  5600, /*angle*/ 0, 180, 0, /*bhvParam*/ BPARAM2(0x00), /*bhv*/ bhvCannonClosed,           /*acts*/ ACT_1 | ACT_2 | ACT_3 | ACT_4 | ACT_5 | ACT_6),
+    #endif
     OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  3304, 4242, -4603, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvKoopaRaceEndpoint,      /*acts*/ ACT_3),
     OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/  3400,  770,  6500, /*angle*/ 0, 0, 0,   /*bhvParam*/ BPARAM2(KOOPA_BP_NORMAL), /*bhv*/ bhvKoopa,                  /*acts*/ ACT_4 | ACT_5 | ACT_6),
 	OBJECT_WITH_ACTS(/*model*/ MODEL_RED_COIN,              /*pos*/ -4850,  768,  2400, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvRedCoin,                /*acts*/ ACT_6),
