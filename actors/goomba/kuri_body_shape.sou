@@ -1,0 +1,42 @@
+/***************************************************************************************************
+		Convert from NINGEN		(kuri_body) 																
+****************************************************************************************************/
+static Vtx vtx_kuri_body_0[] = {
+	{     72/4,     72/4,      0,     0,   990,     0,    -1,   -1,   -1,  255}, 
+	{    -72/4,     72/4,      0,     0,     0,     0,    -1,   -1,   -1,  255}, 
+	{    -72/4,    -72/4,      0,     0,     0,   990,    -1,   -1,   -1,  255}, 
+	{     72/4,    -72/4,      0,     0,   990,   990,    -1,   -1,   -1,  255}, 
+};
+
+ALIGNED8 static const Texture kuri_body_txt[] = {
+#include "actors/goomba/kuri_body_txt.rgba16.inc.c"
+};
+
+static Gfx gfx_kuri_body_0[] = {
+	gs_Tani_LoadTextureImage2(kuri_body_txt, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32, 0, 7),
+	gsSPVertex(&vtx_kuri_body_0[0],  4, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 0, 2, 3, 0),
+	gsSPEndDisplayList() 
+};
+
+Gfx gfx_kuri_body[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
+	gsSPClearGeometryMode(G_LIGHTING), 
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, 7, 0,  0,0,0, 0,0,0),
+
+	gsSPTexture(0xffff,0xffff, 0, 0, G_ON),
+
+	gs_Tani_SetUpTileDescrip(G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 32,  0, 0, G_TX_WRAP|G_TX_NOMIRROR, 5, G_TX_NOLOD, G_TX_WRAP|G_TX_NOMIRROR, 5, G_TX_NOLOD),
+
+		gsSPDisplayList(gfx_kuri_body_0),
+
+	gsSPTexture(0xffff, 0xffff, 0, 0, G_OFF),
+
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
+	gsSPSetGeometryMode(G_LIGHTING), 
+	gsSPEndDisplayList() 
+};
+
