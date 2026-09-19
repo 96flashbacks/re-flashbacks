@@ -20,10 +20,6 @@ void bhv_bobomb_anchor_mario_loop(void) {
 }
 
 void king_bobomb_act_0(void) {
-
-    o->oForwardVel = 0.0f;
-    o->oVelY = 0.0f;
-
     if (o->oSubAction == 0) {
         cur_obj_become_intangible();
         gSecondCameraFocus = o;
@@ -360,6 +356,8 @@ void bhv_king_bobomb_loop(void) {
             break;
         case HELD_THROWN:
         case HELD_DROPPED:
+            // Animation 3 was used when King Bob-omb was thrown, seen in E3 1996 B-Roll footage
+            cur_obj_init_animation(3);
             cur_obj_get_thrown_or_placed(sp34, sp30, 4);
             cur_obj_become_intangible();
             o->oPosY += 20.0f;
