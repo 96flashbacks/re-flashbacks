@@ -120,6 +120,17 @@ void bhv_goomba_init(void) {
 }
 
 /**
+ * Enter the jump action and set initial y velocity.
+ */
+static void goomba_begin_jump(void) {
+    cur_obj_play_sound_2(SOUND_OBJ_GOOMBA_ALERT);
+
+    o->oAction = GOOMBA_ACT_JUMP;
+    o->oForwardVel = 0.0f;
+    o->oVelY = 50.0f / 3.0f * o->oGoombaScale;
+}
+
+/**
  * If spawned by a triplet spawner, mark the flag in the spawner to indicate that
  * this goomba died. This prevents it from spawning again when mario leaves and
  * comes back.
@@ -144,7 +155,7 @@ static void goomba_act_walk(void) {
     obj_forward_vel_approach(o->oGoombaRelativeSpeed * o->oGoombaScale, 0.4f);
 
     // If walking fast enough, play footstep sounds
-    if (o->oGoombaRelativeSpeed > 0.4f) {
+    if (o->oGoombaRelativeSpeed > 0) {
         cur_obj_play_sound_at_anim_range(2, 17, SOUND_OBJ_GOOMBA_WALK);
     }
 
@@ -167,6 +178,8 @@ static void goomba_act_walk(void) {
         if (!(o->oGoombaTurningAwayFromWall =
                   obj_bounce_off_walls_edges_objects(&o->oGoombaTargetYaw))) {
             if (o->oDistanceToMario < 500.0f) {
+                // Simply turns towards Mario with no speed increase, 
+                // as seen in E3 1996 B-Roll footage
                 o->oGoombaTargetYaw = o->oAngleToMario;
             } else {
                 // If mario is far away, walk at a normal pace, turning randomly
@@ -181,6 +194,7 @@ static void goomba_act_walk(void) {
                         o->oGoombaTargetYaw = obj_random_fixed_turn(0x2000);
                         o->oGoombaWalkTimer = random_linear_offset(100, 100);
                     } else {
+                        goomba_begin_jump();
                         o->oGoombaTargetYaw = obj_random_fixed_turn(0x6000);
                     }
                 }
@@ -203,6 +217,7 @@ static void goomba_act_attacked_mario(void) {
     } else {
         //! This can happen even when the goomba is already in the air. It's
         //  hard to chain these in practice
+        goomba_begin_jump();
         o->oGoombaTargetYaw = o->oAngleToMario;
         o->oGoombaTurningAwayFromWall = FALSE;
     }

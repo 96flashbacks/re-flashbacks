@@ -5712,20 +5712,22 @@ layer_end
 .sound_obj_goomba_alert:
 chan_setbank 9
 chan_setinstr 3
-chan_setval 20
+chan_setval 24
 chan_call .set_reverb
-chan_setenvelope .envelope_33EC
+chan_setenvelope .envelope_3428
+chan_setvibratoextent 80
+chan_setvibratorate 60
 chan_setlayer 0, .layer_230F
+chan_setval 30
+chan_call .delay
+chan_setvibratoextent 0
 chan_end
 
 .layer_230F:
-layer_transpose -24
 layer_somethingon
-layer_portamento 0x85, 25, 255
-layer_note1 3, 0xf, 85
-layer_transpose 0
-layer_note1 51, 0x1c, 85
-layer_delay 0x19
+layer_portamento 0x85, 15, 255
+layer_note1 3, 0x7, 100
+layer_note1 36, 0x18, 100
 layer_end
 
 .sound_obj_stomped:
