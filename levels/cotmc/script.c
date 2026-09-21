@@ -18,8 +18,6 @@
 
 static const LevelScript script_func_local_1[] = {
     OBJECT(/*model*/ MODEL_CAP_SWITCH, /*pos*/ 0,  363, -6144, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM2(0x01), /*bhv*/ bhvCapSwitch),
-    OBJECT(/*model*/ MODEL_NONE,       /*pos*/ 0,  500, -7373, /*angle*/ 0, 0, 0, /*bhvParam*/ 0, /*bhv*/ bhvWaterfallSoundLoop),
-    OBJECT(/*model*/ MODEL_NONE,       /*pos*/ 0,  500,  3584, /*angle*/ 0, 0, 0, /*bhvParam*/ 0, /*bhv*/ bhvWaterfallSoundLoop),
     RETURN(),
 };
 
