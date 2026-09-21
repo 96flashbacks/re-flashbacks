@@ -24,7 +24,6 @@ static const LevelScript script_func_local_1[] = {
 };
 
 static const LevelScript script_func_local_2[] = {
-    OBJECT(/*model*/ MODEL_NONE,       /*pos*/ 0, -200, -7000, /*angle*/ 0, 0, 0, /*bhvParam*/ BPARAM1(STAR_INDEX_ACT_1), /*bhv*/ bhvHiddenRedCoinStar),
     RETURN(),
 };
 
