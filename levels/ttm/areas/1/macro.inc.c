@@ -9,7 +9,6 @@ const MacroObject ttm_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/ -3507, -2480, -1046),
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/ -3538, -2409,   -61),
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/ -3538, -2330,  1046),
-    MACRO_OBJECT               (/*preset*/ macro_coin_line_horizontal,        /*yaw*/  82, /*pos*/  -521, -2047,  3568),
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/  2369, -1451, -3876),
     MACRO_OBJECT               (/*preset*/ macro_bobomb,                      /*yaw*/   0, /*pos*/   707, -1223, -3846),
     MACRO_OBJECT               (/*preset*/ macro_goomba_triplet_spawner,      /*yaw*/   0, /*pos*/  -584,   195,  1476),
