@@ -2,7 +2,7 @@
 /*	shape data wallman_base_data (skeleton & animation) */
 /**************************************************************/
 
-#define SCALE 0.24
+#define SCALE 0.25
 #define ShapeColor_wallman(R,G,B) {{R*SCALE ,G*SCALE ,B*SCALE ,0 ,R*SCALE ,G*SCALE ,B*SCALE ,0 },{ R, G, B, 0, R, G, B, 0, LIGHT_X, LIGHT_Y, LIGHT_Z, 0} }
 
 
@@ -530,7 +530,7 @@ Hierarchy RCP_HmsEnemywallman[] = {
  hmsBegin()
  hmsScale(0.25f)
     hmsBegin()
-      hmsJoint(RM_SURF,NULL,5,181,0)  /* chn18(11) */
+      hmsJoint(RM_SURF,NULL,5,81,0)  /* chn18(11) */ // Different root offset like Bowser
       hmsBegin()
          hmsJoint(RM_SURF,RCP_wallman_body,0,0,0)  /* wallman_body(10) */
          hmsBegin()
