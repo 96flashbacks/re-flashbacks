@@ -39,7 +39,7 @@ void bhv_whirlpool_loop(void) {
         o->header.gfx.node.flags &= ~GRAPH_RENDER_INVISIBLE;
 
         // not sure if actually an array
-        gEnvFxBubbleConfig[ENVFX_STATE_PARTICLECOUNT] = 60;
+        gEnvFxBubbleConfig[ENVFX_STATE_PARTICLECOUNT] = 0;
         gEnvFxBubbleConfig[ENVFX_STATE_SRC_X] = o->oPosX;
         gEnvFxBubbleConfig[ENVFX_STATE_SRC_Z] = o->oPosZ;
         gEnvFxBubbleConfig[ENVFX_STATE_DEST_X] = o->oPosX;
