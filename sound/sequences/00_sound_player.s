@@ -3117,7 +3117,7 @@ chan_end
 
 .layer_1265:
 layer_portamento 0x81, 34, 127
-layer_note1 38, 0x30, 127
+layer_note1 46, 0x30, 127
 layer_delay 0x30
 layer_end
 
