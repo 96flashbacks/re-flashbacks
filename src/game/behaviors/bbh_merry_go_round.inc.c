@@ -75,7 +75,7 @@ void bhv_merry_go_round_loop(void) {
             o->oMerryGoRoundMarioIsOutside++;
         }
     } else {
-        play_sound(SOUND_AIR_HOWLING_WIND, gGlobalSoundSource);
+        // No ambient howling wind in BBH, as seen in E3 1996 B-Roll footage
 
         if (
             // There are objects outside BBH, such as corkboxes.
