@@ -35,7 +35,6 @@ const MacroObject ddd_seg7_area_2_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_seaweed_bundle,              /*yaw*/   0, /*pos*/  2999, -4092,  4430),
     MACRO_OBJECT               (/*preset*/ macro_coin_ring_horizontal,        /*yaw*/   0, /*pos*/  4876, -4087,  4430),
     MACRO_OBJECT               (/*preset*/ macro_coin_line_vertical_flying,   /*yaw*/   0, /*pos*/  3892, -4030, -3830),
-    MACRO_OBJECT               (/*preset*/ macro_coin_line_horizontal,        /*yaw*/  90, /*pos*/  3923,   110,  5953),
     MACRO_OBJECT               (/*preset*/ macro_fire_spitter,                /*yaw*/   0, /*pos*/   938,   153,  4107),
     MACRO_OBJECT               (/*preset*/ macro_hidden_breakable_box,        /*yaw*/   0, /*pos*/  5940,   110,  4500),
     MACRO_OBJECT               (/*preset*/ macro_koopa_shell_underwater,      /*yaw*/   0, /*pos*/  3886, -4050,  5100),
