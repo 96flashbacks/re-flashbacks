@@ -994,9 +994,11 @@ u32 interact_door(struct MarioState *m, UNUSED u32 interactType, struct Object *
                 enterDoorAction = ACT_ENTERING_STAR_DOOR;
             }
 
+            /*
             if (doorSaveFileFlag != 0 && !(save_file_get_flags() & doorSaveFileFlag)) {
                 enterDoorAction = ACT_UNLOCKING_STAR_DOOR;
             }
+            */
 
             return set_mario_action(m, enterDoorAction, actionArg);
         } else if (!sDisplayingDoorText) {

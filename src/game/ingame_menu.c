@@ -2592,10 +2592,45 @@ void render_save_confirmation(s16 x, s16 y, s8 *index, s16 yOffset)
     u8 textContinueWithoutSave[] = { TEXT_CONTINUE_WITHOUT_SAVING };
 #endif
 
+    u8 *name = NULL;
+    u8 **extraNameTbl = segmented_to_virtual(seg2_act_name_table);
+
     handle_menu_scrolling(MENU_SCROLL_VERTICAL, index, 1, 3);
 
     gSPDisplayList(gDisplayListHead++, dl_ia_text_begin);
     gDPSetEnvColor(gDisplayListHead++, 255, 255, 255, gMenuTextAlpha);
+
+    switch (gHudDisplay.stars)
+    {
+        case 1:
+            // The mountain room opens!
+            name = segmented_to_virtual(extraNameTbl[(COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX) * 6) + 8]);
+            break;
+
+        case 3:
+            // The water and snow rooms open!
+            name = segmented_to_virtual(extraNameTbl[(COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX) * 6) + 9]);
+            break;
+
+        case 12:
+            // The Big Star Door opens!
+            name = segmented_to_virtual(extraNameTbl[(COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX) * 6) + 10]);
+            break;
+
+        case 25:
+            // The door to Bowser is open!
+            name = segmented_to_virtual(extraNameTbl[(COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX) * 6) + 11]);
+            break;
+
+        case 35:
+            // The door to the third floor is open!
+            name = segmented_to_virtual(extraNameTbl[(COURSE_NUM_TO_INDEX(COURSE_STAGES_MAX) * 6) + 12]);
+            break;
+    }
+
+    if (name != NULL) {
+        print_generic_string(76, 150, name);
+    }
 
     print_generic_string(TXT_SAVEOPTIONS_X, y + TXT_SAVECONT_Y, LANGUAGE_ARRAY(textSaveAndContinue));
     print_generic_string(TXT_SAVEOPTIONS_X, y - TXT_SAVEQUIT_Y, LANGUAGE_ARRAY(textSaveAndQuit));
