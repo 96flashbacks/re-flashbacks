@@ -104,8 +104,7 @@ void spawn_no_exit_star(f32 homeX, f32 homeY, f32 homeZ) {
 
 void bhv_hidden_red_coin_star_init(void) {
     s16 count;
-
-    if (gCurrCourseNum != COURSE_JRB) {
+    
         spawn_object(o, MODEL_TRANSPARENT_STAR, bhvRedCoinStarMarker);
     }
 
