@@ -145,7 +145,6 @@ static s32 boo_vanish_or_appear(void) {
         || relativeMarioFaceAngle < relativeMarioFaceAngleThreshhold) {
         if (o->oOpacity == 40) {
             o->oBooTargetOpacity = 255;
-            cur_obj_play_sound_2(SOUND_OBJ_BOO_LAUGH_LONG);
         }
 
         if (o->oOpacity > 180) {
@@ -551,7 +550,7 @@ static void big_boo_act_1(void) {
     }
 
     if (attackStatus == BOO_ATTACKED) {
-        create_sound_spawner(SOUND_OBJ_THWOMP);
+        create_sound_spawner(SOUND_OBJ_DYING_ENEMY1);
     }
 }
 
@@ -566,7 +565,7 @@ static void big_boo_spawn_ghost_hunt_star(void) {
 }
 
 static void big_boo_spawn_balcony_star(void) {
-    spawn_default_star(700.0f, 3200.0f, 1900.0f);
+    spawn_default_star(690.0f, 2200.0f, 2500.0f);
 }
 
 static void big_boo_spawn_merry_go_round_star(void) {
@@ -811,7 +810,6 @@ void bhv_boo_in_castle_loop(void) {
 
         if (o->oDistanceToMario < 1000.0f) {
             o->oAction++;
-            cur_obj_play_sound_2(SOUND_OBJ_BOO_LAUGH_LONG);
         }
 
         o->oForwardVel = 0.0f;
