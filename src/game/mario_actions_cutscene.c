@@ -98,14 +98,18 @@ void handle_save_menu(struct MarioState *m) {
             disable_time_stop();
             m->faceAngle[1] += 0x8000;
             // figure out what dialog to show, if we should
-            dialogID = get_star_collection_dialog(m);
+
+            // Commented out in favor of the scrapped "Door to Room opens!" text.
+            /*dialogID = get_star_collection_dialog(m);
             if (dialogID) {
                 play_peachs_jingle();
                 // look up for dialog
                 set_mario_action(m, ACT_READING_AUTOMATIC_DIALOG, dialogID);
-            } else {
-                set_mario_action(m, ACT_IDLE, 0);
-            }
+            } else {*/
+
+            set_mario_action(m, ACT_IDLE, 0);
+
+            //}
         }
     }
 }
