@@ -24,7 +24,6 @@ const MacroObject lll_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,               /*yaw*/   0, /*pos*/ -2440,    67, -2286),
     MACRO_OBJECT               (/*preset*/ macro_coin_line_horizontal_flying, /*yaw*/   0, /*pos*/ -1960,    38,  3693),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,               /*yaw*/   0, /*pos*/ -6966,    41,  3906),
-    MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,               /*yaw*/   0, /*pos*/ -6806,   188,  4653),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_2,               /*yaw*/   0, /*pos*/ -6033,    70,  4973),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_wooden_signpost,             /*yaw*/   0, /*pos*/ -3980,   154,  6057, /*bhvParam*/ DIALOG_086),
     MACRO_OBJECT               (/*preset*/ macro_flamethrower,                /*yaw*/   0, /*pos*/  1400,   -20,  3720),
