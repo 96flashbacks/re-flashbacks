@@ -106,7 +106,6 @@ void bhv_hidden_red_coin_star_init(void) {
     s16 count;
     
         spawn_object(o, MODEL_TRANSPARENT_STAR, bhvRedCoinStarMarker);
-    }
 
     count = count_objects_with_behavior(bhvRedCoin);
     if (count == 0) {
