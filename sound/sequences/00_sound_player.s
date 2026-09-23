@@ -3589,13 +3589,12 @@ chan_setbank 5
 chan_setinstr 5
 chan_setenvelope .envelope_3344
 chan_setval 20
-chan_call .set_reverb
 chan_setlayer 0, .layer_1571
 chan_end
 
 .layer_1571:
-layer_note1 14, 0x34, 110
-layer_delay 0x14
+layer_note1 4, 0x34, 127
+layer_delay 0x12
 layer_end
 
 .sound_general_break_box:
