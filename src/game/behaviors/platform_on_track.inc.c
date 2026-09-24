@@ -19,15 +19,15 @@ static Collision const *sPlatformOnTrackCollisionModels[] = {
  * Paths for the different instances of these platforms.
  */
 static Trajectory const *sPlatformOnTrackPaths[] = {
-    rr_seg7_trajectory_0702EC3C,
-    rr_seg7_trajectory_0702ECC0,
+    rr_area_1_spline_CarpetPath01,
+    rr_area_1_spline_CarpetPath02,
     ccm_seg7_trajectory_0701669C,
     bitfs_seg7_trajectory_070159AC,
     hmc_seg7_trajectory_0702B86C,
     lll_seg7_trajectory_0702856C,
     lll_seg7_trajectory_07028660,
-    rr_seg7_trajectory_0702ED9C,
-    rr_seg7_trajectory_0702EEE0,
+    rr_area_1_spline_CarpetPath03,
+    NULL,
 };
 
 /**

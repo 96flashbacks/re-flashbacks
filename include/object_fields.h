@@ -1157,4 +1157,10 @@
 #define /*0x0FC*/ oYoshiChosenHome OBJECT_FIELD_S32(0x1D)
 #define /*0x100*/ oYoshiTargetYaw  OBJECT_FIELD_S32(0x1E)
 
+/* Rainbow Ride's Rotating Platform with Bridges */
+
+//#define		obj_work0			OBJECT_FIELD_S32(0x1B)
+#define		oRRPfMovementSine			OBJECT_FIELD_S32(0x1C)
+//#define		obj_work2			OBJECT_FIELD_S32(0x1D)
+
 #endif // OBJECT_FIELDS_H

@@ -302,6 +302,8 @@ const Gfx mario_cap_seg3_dl_03022FF8[] = {
 // 0x030230B0 - 0x03023108
 const Gfx mario_cap_seg3_dl_030230B0[] = {
     gsSPDisplayList(mario_cap_seg3_dl_03022ED8),
+    gsSPLight(&mario_cap_seg3_lights_0301CF20.l, 1),
+    gsSPLight(&mario_cap_seg3_lights_0301CF20.a, 2),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, mario_cap_seg3_texture_0301E750),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
@@ -358,6 +360,8 @@ const Gfx mario_cap_seg3_dl_03023160[] = {
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, mario_cap_seg3_texture_0301E750),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 64 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
+    gsSPLight(&mario_cap_seg3_lights_0301CF20.l, 1),
+    gsSPLight(&mario_cap_seg3_lights_0301CF20.a, 2),
     gsSPDisplayList(mario_cap_seg3_dl_03022E78),
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, mario_cap_seg3_texture_0301F750),
     gsDPLoadSync(),
