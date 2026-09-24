@@ -30,7 +30,7 @@ const MacroObject ttc_seg7_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_ttc_rotating_hexagon,  /*yaw*/   0, /*pos*/  1052, -1934,  -769),
     MACRO_OBJECT               (/*preset*/ macro_ttc_rotating_triangle, /*yaw*/ 225, /*pos*/  -620,  1229,  1233),
     MACRO_OBJECT               (/*preset*/ macro_ttc_rotating_triangle, /*yaw*/ 315, /*pos*/  1050,   -19, -1037),
-    MACRO_OBJECT               (/*preset*/ macro_ttc_pit_block_1,       /*yaw*/ 315, /*pos*/ -1100,   -71, -1030),
+    MACRO_OBJECT               (/*preset*/ macro_ttc_pit_block_2,       /*yaw*/ 315, /*pos*/ -1100,   -71, -1030),
     MACRO_OBJECT               (/*preset*/ macro_ttc_clock_hand,        /*yaw*/  45, /*pos*/     0, -2487,     0),
     MACRO_OBJECT               (/*preset*/ macro_ttc_spinner,           /*yaw*/ 135, /*pos*/  -762,  4347,  1047),
     MACRO_OBJECT               (/*preset*/ macro_ttc_spinner,           /*yaw*/ 315, /*pos*/ -1037,  4244,   772),
