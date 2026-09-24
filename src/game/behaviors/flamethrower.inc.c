@@ -96,5 +96,8 @@ void bhv_rr_rotating_bridge_platform_loop(void) {
     o->oMoveAngleYaw -= 0x80;
     o->oAngleVelYaw = -0x80;
 
+    o->oPosY = o->oHomeY + (sins(o->oRRPfMovementSine)+1.0) * 500;
+ 	o->oRRPfMovementSine  += 0x40;
+
     bhv_flamethrower_loop();
 }

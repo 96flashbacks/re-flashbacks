@@ -1178,13 +1178,13 @@ const BehaviorScript bhvAnotherElavator[] = {
 const BehaviorScript bhvRRElevatorPlatform[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
-    LOAD_COLLISION_DATA(rr_seg7_collision_elevator_platform),
+    /*LOAD_COLLISION_DATA(rr_seg7_collision_elevator_platform),
     SET_HOME(),
     CALL_NATIVE(bhv_elevator_init),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_elevator_loop),
         CALL_NATIVE(load_object_collision_model),
-    END_LOOP(),
+    END_LOOP(),*/
 };
 
 const BehaviorScript bhvHMCElevatorPlatform[] = {
@@ -5815,14 +5815,14 @@ const BehaviorScript bhvSkeeterWave[] = {
 
 const BehaviorScript bhvSwingPlatform[] = {
     BEGIN(OBJ_LIST_SURFACE),
-    LOAD_COLLISION_DATA(rr_seg7_collision_pendulum),
+    /*LOAD_COLLISION_DATA(rr_seg7_collision_pendulum),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
     SET_FLOAT(oCollisionDistance, 2000),
     CALL_NATIVE(bhv_swing_platform_init),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_swing_platform_update),
         CALL_NATIVE(load_object_collision_model),
-    END_LOOP(),
+    END_LOOP(),*/
 };
 
 const BehaviorScript bhvDonutPlatformSpawner[] = {
@@ -5835,12 +5835,12 @@ const BehaviorScript bhvDonutPlatformSpawner[] = {
 
 const BehaviorScript bhvDonutPlatform[] = {
     BEGIN(OBJ_LIST_SURFACE),
-    LOAD_COLLISION_DATA(rr_seg7_collision_donut_platform),
+    /*LOAD_COLLISION_DATA(rr_seg7_collision_donut_platform),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
     SET_HOME(),
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_donut_platform_update),
-    END_LOOP(),
+    END_LOOP(),*/
 };
 
 const BehaviorScript bhvDDDPole[] = {
