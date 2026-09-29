@@ -294,9 +294,9 @@ void render_hud_stars(void) {
         return;
     }
 
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77), HUD_TOP_Y, "-");
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77) + 16, HUD_TOP_Y, "*");
-    print_text_fmt_int(14 + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77 - 16), HUD_TOP_Y, "%d", gHudDisplay.stars);
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(76), HUD_TOP_Y, "-");
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(76) + 16, HUD_TOP_Y, "*");
+    print_text_fmt_int(14 + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(76 - 16), HUD_TOP_Y, "%d", gHudDisplay.stars);
 #endif
 }
 

@@ -9,8 +9,7 @@ void bhv_init_changing_water_level_loop(void) {
     } else if (o->oTimer < 10) {
         gEnvironmentLevels[0] = gEnvironmentRegions[6];
     } else {
-        gEnvironmentRegions[6] = gEnvironmentLevels[0] + sins(o->oWaterLevelTriggerUnkF4) * 20.0f;
-        o->oWaterLevelTriggerUnkF4 += 0x200;
+        gEnvironmentRegions[6] = gEnvironmentLevels[0];
     }
 }
 
