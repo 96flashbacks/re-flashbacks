@@ -24,7 +24,9 @@ static const LevelScript script_func_local_1[] = {
 };
 
 static const LevelScript script_func_local_2[] = {
-    OBJECT(/*model*/ MODEL_NONE, /*pos*/  977, 1024, 2075, /*angle*/ 0, 0, 0, /*bhvParam*/ 0, /*bhv*/ bhvSnowMoundSpawn),
+    OBJECT(/*model*/ MODEL_NONE,           /*pos*/  977, 1024, 2075, /*angle*/ 0, 0, 0, /*bhvParam*/ 0, /*bhv*/ bhvSnowMoundSpawn),
+    // Object placement commented out in the iQue source code
+    OBJECT(/*model*/ MODEL_SL_CRACKED_ICE, /*pos*/ 4377, 1843, 4361, /*angle*/ 0, 0, 0, /*bhvParam*/ 0, /*bhv*/ bhvUnusedPoundablePlatform),
     RETURN(),
 };
 
