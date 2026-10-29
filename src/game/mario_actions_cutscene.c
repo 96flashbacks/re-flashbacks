@@ -285,10 +285,15 @@ s32 act_reading_automatic_dialog(struct MarioState *m) {
         enable_time_stop();
     }
     if (m->actionState < 9) {
+	#ifdef DECEMBER
+	    set_mario_animation(m, m->prevAction == ACT_STAR_DANCE_WATER ? MARIO_ANIM_WATER_IDLE
+                                                                     : MARIO_ANIM_IDLE);
+	#else
         set_mario_animation(m, m->prevAction == ACT_STAR_DANCE_WATER ? MARIO_ANIM_WATER_IDLE
                                                                      : MARIO_ANIM_FIRST_PERSON);
         // always look up for automatic dialogs
-        m->actionTimer -= 1024;
+		m->actionTimer -= 1024;
+	#endif
     } else {
         // set Mario dialog
         if (m->actionState == 9) {
@@ -307,7 +312,10 @@ s32 act_reading_automatic_dialog(struct MarioState *m) {
         }
         // look back down
         else if (m->actionState < 19) {
-            m->actionTimer += 1024;
+        #ifdef DECEMBER
+		#else
+			m->actionTimer += 1024;
+		#endif
         }
         // finished action
         else if (m->actionState == 25) {
