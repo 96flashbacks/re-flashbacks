@@ -107,7 +107,11 @@ s32 check_fall_damage(struct MarioState *m, u32 hardFallAction) {
 
 s32 check_kick_or_dive_in_air(struct MarioState *m) {
     if (m->input & INPUT_B_PRESSED) {
-        return set_mario_action(m, m->forwardVel > 28.0f ? ACT_DIVE : ACT_JUMP_KICK, 0);
+        #ifdef DECEMBER
+            return set_mario_action(m, m->forwardVel > 28.0f ? ACT_DIVE : ACT_DIVE, 0);
+        #else
+            return set_mario_action(m, m->forwardVel > 28.0f ? ACT_DIVE : ACT_JUMP_KICK, 0);
+        #endif
     }
     return FALSE;
 }
